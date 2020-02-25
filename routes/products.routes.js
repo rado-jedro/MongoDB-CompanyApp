@@ -34,7 +34,7 @@ router.get('/products/:id', async (req, res) => {
   }
 });
 
-router.post('/departments', async (req, res) => {
+router.post('/products', async (req, res) => {
   try {
     const { name, client } = req.body;
     const newProduct = new Product({ name: name, client: client });
@@ -61,7 +61,7 @@ router.put('/products/:id', async (req, res) => {
   }
 });
 
-router.delete('/departments/:id', async (req, res) => {
+router.delete('/products/:id', async (req, res) => {
   try {
     const pro = await Product.findById(req.params.id);
     if (pro) {
