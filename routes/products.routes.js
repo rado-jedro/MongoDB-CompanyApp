@@ -5,7 +5,7 @@ const router = express.Router();
 const ObjectId = require('mongodb').ObjectId;
 
 router.get('/products', (req, res) => {
-  req.db.collection('/products').find().toArray((err, data) => {
+  req.db.collection('products').find().toArray((err, data) => {
     if(err) res.status(500).json( {message: err});
     else res.json(data);
   });
