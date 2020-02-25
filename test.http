@@ -1,0 +1,110 @@
+//departments
+
+GET http://localhost:8000/api/departments/
+
+###
+
+GET http://localhost:8000/api/departments/random
+
+###
+
+GET http://localhost:8000/api/departments/5e544d558f67dda0092ee0d0
+
+###
+
+POST  http://localhost:8000/api/departments
+content-type: application/json
+{
+    "name": "Prod3"
+}
+
+###
+
+PUT http://localhost:8000/api/departments/5e559cf849987435e493f313
+content-type: application/json
+{
+    "name": "Prod456"
+}
+
+###
+
+DELETE   http://localhost:8000/api/departments/5e559c8a49987435e493f312
+
+###
+
+
+//employees
+
+GET http://localhost:8000/api/employees/
+
+###
+
+GET http://localhost:8000/api/employees/random
+
+###
+
+GET http://localhost:8000/api/employees/5e544e188f67dda0092ee0d5
+
+###
+
+POST http://localhost:8000/api/employees/
+content-type: application/json
+
+{
+    "firstName": "Imie13",
+    "lastName": "Nazwisko13",
+    "department": "Dzial13"
+}
+
+###
+
+PUT http://localhost:8000/api/employees/5e55a3e48666f71e90883d2d
+content-type: application/json
+{
+    "firstName": "Imie134",
+    "lastName": "Nazwisko13",
+    "department": "Dzial13"
+}
+
+###
+
+DELETE   http://localhost:8000/api/employees/5e55a49a8666f71e90883d2e
+
+###
+
+//products
+
+GET http://localhost:8000/api/products
+
+###
+
+GET http://localhost:8000/api/products/random
+
+###
+
+GET http://localhost:8000/api/products/5e55a58d8666f71e90883d2f
+
+###
+
+POST http://localhost:8000/api/products/
+content-type: application/json
+
+{
+    "name": "Proddddddd",
+    "client": "Client"
+}
+
+###
+
+PUT http://localhost:8000/api/products/5e55a3298666f71e90883d29
+content-type: application/json
+{
+    "name": "Prod456",
+    "client": "Client1234"
+}
+
+###
+
+DELETE http://localhost:8000/api/products/5e55a3298666f71e90883d29
+
+###
