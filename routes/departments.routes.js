@@ -50,8 +50,9 @@ router.put('/departments/:id', async (req, res) => {
     const dep = await Department.findById(req.params.id);
     if (dep) {
       dep.name = name;
-      await dep.save();
-      res.json({ message: 'OK' });
+      const newDep = await Department.findById(req.params.id);
+      await newDep.save();
+      res.json({ message: `Element ${dep} has been replaced with new element ${newDep}` });
     } else res.status(404).json({ message: 'Not found...' });
   } catch (err) {
     res.status(500).json(err);
@@ -63,7 +64,7 @@ router.delete('/departments/:id', async (req, res) => {
     const dep = await Department.findById(req.params.id);
     if (dep) {
       await Department.deleteOne({ _id: req.params.id });
-      res.json({ message: 'OK' });
+      res.json({ message: `Element ${dep} has been deleted` });
     } else res.status(404).json({ message: 'Not found...' });
   } catch (err) {
     res.status(500).json(err);
