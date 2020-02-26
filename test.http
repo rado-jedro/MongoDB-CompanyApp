@@ -14,6 +14,7 @@ GET http://localhost:8000/api/departments/5e544d558f67dda0092ee0d0
 
 POST  http://localhost:8000/api/departments
 content-type: application/json
+
 {
     "name": "Prod3"
 }
@@ -22,6 +23,7 @@ content-type: application/json
 
 PUT http://localhost:8000/api/departments/5e559cf849987435e493f313
 content-type: application/json
+
 {
     "name": "Prod456"
 }
@@ -51,24 +53,25 @@ POST http://localhost:8000/api/employees/
 content-type: application/json
 
 {
-    "firstName": "Imie13",
+    "firstName": "Imie1323",
     "lastName": "Nazwisko13",
     "department": "Dzial13"
 }
 
 ###
 
-PUT http://localhost:8000/api/employees/5e55a3e48666f71e90883d2d
+PUT http://localhost:8000/api/employees/5e563ae708ac9629fc3f4622
 content-type: application/json
+
 {
-    "firstName": "Imie134",
-    "lastName": "Nazwisko13",
-    "department": "Dzial13"
+    "firstName": "Bob",
+    "lastName": "Jones",
+    "department": "FT"
 }
 
 ###
 
-DELETE   http://localhost:8000/api/employees/5e55a49a8666f71e90883d2e
+DELETE   http://localhost:8000/api/employees/5e563ae708ac9629fc3f4622
 
 ###
 
@@ -82,7 +85,7 @@ GET http://localhost:8000/api/products/random
 
 ###
 
-GET http://localhost:8000/api/products/5e55a58d8666f71e90883d2f
+GET http://localhost:8000/api/products/5e55a2db8666f71e90883d27
 
 ###
 
@@ -91,20 +94,21 @@ content-type: application/json
 
 {
     "name": "Proddddddd",
-    "client": "Client"
-}
-
-###
-
-PUT http://localhost:8000/api/products/5e55a3298666f71e90883d29
-content-type: application/json
-{
-    "name": "Prod456",
     "client": "Client1234"
 }
 
 ###
 
-DELETE http://localhost:8000/api/products/5e55a3298666f71e90883d29
+PUT http://localhost:8000/api/products/5e563bbb22f59530d4efe28b
+content-type: application/json
+
+{
+    "name": "Prod456",
+    "client": "Client123412345667"
+}
+
+###
+
+DELETE http://localhost:8000/api/products/5e55a2db8666f71e90883d27
 
 ###
