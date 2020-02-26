@@ -50,9 +50,8 @@ router.put('/departments/:id', async (req, res) => {
     const dep = await Department.findById(req.params.id);
     if (dep) {
       dep.name = name;
-      const newDep = await Department.findById(req.params.id);
-      await newDep.save();
-      res.json({ message: `Element ${dep} has been replaced with new element ${newDep}` });
+      await dep.save();
+      res.json({ message: `Element ${dep} has been updated` });
     } else res.status(404).json({ message: 'Not found...' });
   } catch (err) {
     res.status(500).json(err);
